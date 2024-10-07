@@ -15,18 +15,20 @@ public class register {
     private String email;
     private String password;
 
-
+    // New field to store the token
+    @Column(nullable = true)
+    private String token;
 
 
     public register(){
 
     }
-    public register(int id, String username, String email, String password) {
+    public register(int id, String username, String email, String password, String token) {
         this.id = id;
         this.username = username;
         this.email = email;
-
         this.password = password;
+        this.token = token;
     }
 
     public int getId() {
@@ -60,4 +62,15 @@ public class register {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+
 }

@@ -1,6 +1,7 @@
 package org.example.personal_websitebackend.presentation;
 
 
+import jakarta.mail.internet.MimeMessage;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -40,4 +41,7 @@ public class mailsender {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+
 }
